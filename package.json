@@ -1,0 +1,35 @@
+{
+  "name": "fastify-vite-hello-world",
+  "version": "1.0.0",
+  "description": "Hello world app based on Fastify, Fastify-Vite and Vue3",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server",
+    "build": "node server build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuslegStyle/fastify-vite-hello-world.git"
+  },
+  "keywords": [
+    "fastify",
+    "fastify-vite",
+    "vue"
+  ],
+  "author": "dzaporozhets",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuslegStyle/fastify-vite-hello-world/issues"
+  },
+  "homepage": "https://github.com/SuslegStyle/fastify-vite-hello-world#readme",
+  "dependencies": {
+    "@vueuse/head": "^0.6.0",
+    "fastify": "^3.19.2",
+    "fastify-api": "^0.2.0",
+    "fastify-vite": "^2.2.0-beta.5",
+    "fastify-vite-vue": "^2.2.0-beta.5",
+    "vue": "^3.1.5",
+    "vue-router": "^4.0.10"
+  }
+}
