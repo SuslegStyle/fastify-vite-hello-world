@@ -1,6 +1,6 @@
 const fastify = require('fastify')();
 const fastifyVite = require('fastify-vite');
-const fastifyViteVue = require('fastify-vite-vue');
+const renderer = require('fastify-vite-vue');
 const fastifyApi = require('fastify-api');
 
 async function main () {
@@ -8,7 +8,8 @@ async function main () {
     await fastify.register(fastifyVite, {
         api: true,
         root: __dirname,
-        renderer: fastifyViteVue,
+        renderer,
+        blueprint: false
     });
 
     fastify.api(({ get }) => ({

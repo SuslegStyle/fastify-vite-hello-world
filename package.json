@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "node server",
-    "build": "node server build",
+    "build": "node --unhandled-rejections=strict --trace-warnings server build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,11 +25,16 @@
   "homepage": "https://github.com/SuslegStyle/fastify-vite-hello-world#readme",
   "dependencies": {
     "@vueuse/head": "^0.6.0",
-    "fastify": "^3.22.0",
+    "fastify": "^3.23.1",
     "fastify-api": "^0.2.0",
-    "fastify-vite": "^2.2.0-beta.7",
-    "fastify-vite-vue": "^2.2.0-beta.7",
-    "vue": "^3.2.19",
-    "vue-router": "^4.0.11"
+    "fastify-vite": "^2.2.3",
+    "fastify-vite-vue": "^2.2.3",
+    "vite": "^2.6.14",
+    "vue": "^3.2.21",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.4",
+    "@vitejs/plugin-vue-jsx": "^1.2.0"
   }
 }
