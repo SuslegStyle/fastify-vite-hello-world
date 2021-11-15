@@ -2,31 +2,29 @@
   <main>
     <router-view v-slot="{ Component }">
       <h1>Examples</h1>
-      <Suspense>
+      <Suspense @resolve="hydrationDone">
         <component :key="route.path" :is="Component" />
       </Suspense>
     </router-view>
   </main>
 </template>
 
-<script>
-import { useHead } from '@vueuse/head'
-import { useRoute } from 'vue-router'
+<script setup>
+import { useHead } from '@vueuse/head';
+import { useRoute } from 'vue-router';
+import {hydrationDone} from 'fastify-vite-vue/client.mjs';
 
-export default {
-  setup () {
-    useHead({
-      title: 'Vite App',
-      meta: [{
-        charset: 'utf-8',
-      }, {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1.0',
-      }]
-    })
-    return { route: useRoute() }
-  }
-}
+useHead({
+  title: 'Fastify Vite Hello World App',
+  meta: [{
+    charset: 'utf-8',
+  }, {
+    name: 'viewport',
+    content: 'width=device-width, initial-scale=1.0',
+  }]
+});
+
+const route = useRoute();
 </script>
 
 <style scoped>

@@ -9,7 +9,9 @@ async function main () {
         api: true,
         root: __dirname,
         renderer,
-        blueprint: false
+        entry: {
+            server: '/entry/server.js'
+        }
     });
 
     fastify.api(({ get }) => ({
@@ -27,7 +29,7 @@ async function main () {
 
     await fastify.vite.ready();
 
-    return fastify
+    return fastify;
 }
 
 if (require.main === module) {
