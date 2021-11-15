@@ -5,7 +5,6 @@
 
 <script setup>
 import {useHydration} from 'fastify-vite-vue/client.mjs';
-import {defineProps} from 'vue';
 
 const props = defineProps({
   testProperty: {

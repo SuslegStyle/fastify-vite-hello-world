@@ -15,5 +15,5 @@ export async function createApp (ctx) {
     const router = createRouter({ history, routes: resolvedRoutes });
     app.use(router);
     app.use(head);
-    return { ctx, app, head, routes: resolvedRoutes };
+    return { ctx, app, head, router, routes: resolvedRoutes }
 }

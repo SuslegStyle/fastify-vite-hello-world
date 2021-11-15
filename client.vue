@@ -1,7 +1,6 @@
 <template>
   <main>
     <router-view v-slot="{ Component }">
-      <h1>Examples</h1>
       <Suspense @resolve="hydrationDone">
         <component :key="route.path" :is="Component" />
       </Suspense>

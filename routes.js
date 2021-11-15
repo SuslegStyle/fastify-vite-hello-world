@@ -5,21 +5,21 @@ export default () => [
     {
         path: '/',
         component: Layout,
-        props: {testProperty: 'Hello world'},
         children: [
             {
                 path: '',
-                component: Index
+                component: Index,
+                props: {testProperty: 'Hello world'},
             }
         ]
     },
     {
         path: '/external/',
         component: Layout, //TODO: it can be replaced by any ExternalLayout.vue
-        props: {testProperty: 'Hello external world'},
         children: [
             {
                 path: '',
+                props: {testProperty: 'Hello external world'},
                 component: Index
             }
         ]
