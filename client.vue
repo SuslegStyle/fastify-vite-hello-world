@@ -1,6 +1,7 @@
 <template>
   <main>
     <router-view v-slot="{ Component }">
+      <h1>{{props.testProperty}}</h1>
       <Suspense @resolve="hydrationDone">
         <component :key="route.path" :is="Component" />
       </Suspense>
@@ -21,6 +22,13 @@ useHead({
     name: 'viewport',
     content: 'width=device-width, initial-scale=1.0',
   }]
+});
+
+const props = defineProps({
+  testProperty: {
+    type: String,
+    required: true
+  }
 });
 
 const route = useRoute();
