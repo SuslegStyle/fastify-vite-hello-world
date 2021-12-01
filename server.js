@@ -27,7 +27,7 @@ async function main () {
         reply.send('');
     })
 
-    await fastify.vite.ready();
+    await fastify.vite.commands();
 
     return fastify;
 }
